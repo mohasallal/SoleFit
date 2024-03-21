@@ -3,6 +3,7 @@
   --darkBlueFontColor: #00005a;
   --whiteColor: #f0efed;
   --blackColor: #080b1b;
+  --redColorHover: #c62828;
 }
 
 * {
@@ -49,10 +50,16 @@ nav ul {
 }
 
 nav ul li a {
-  color: black;
+  color: var(--blackColor);
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: var(--redColorHover);
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
 }
 
 .leftNav li {
@@ -98,4 +105,25 @@ nav ul li a {
 
 .headerbutton img {
   width: 100px;
+}
+
+.card {
+  display: block;
+  width: 500px;
+  border: 1px solid red;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card span {
+  padding: 5px;
+  font-size: 15px;
+  position: absolute;
+  font-weight: bold;
+  background-color: var(--redColorHover);
+  right: 0;
+  top: 15px;
 }
