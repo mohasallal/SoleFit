@@ -1,6 +1,8 @@
 :root {
   --yellowFontColor: #fede00;
   --darkBlueFontColor: #00005a;
+  --whiteColor: #f0efed;
+  --blackColor: #080b1b;
 }
 
 * {
@@ -30,12 +32,12 @@ body {
 
 nav {
   top: 15px;
-  width: 80%;
+  width: 90%;
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(240, 248, 255);
+  background-color: var(--whiteColor);
 }
 
 nav ul {
@@ -50,9 +52,10 @@ nav ul li a {
   color: black;
   text-decoration: none;
   font-size: 15px;
+  font-weight: 600;
 }
 
-.leftNav li{
+.leftNav li {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -65,13 +68,17 @@ nav ul li a {
 .HeaderText {
   justify-self: center;
   align-self: center;
-  color: aliceblue;
+  color: var(--whiteColor);
   text-align: center;
   margin: auto;
 }
 
 .HeaderText h1 {
   font-size: 5em;
+}
+
+.HeaderText p {
+  font-size: 1.25em;
 }
 
 .logo {
