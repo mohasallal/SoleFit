@@ -1,50 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var link = document.getElementById("mnyvrsnclk");
-  var dropdown = document.querySelector(".dropdownlistTwo");
+  let link1 = document.getElementById("mnyvrsnclk");
+  let dropdown1 = document.querySelector(".dropdownlistTwo");
+  let link2 = document.getElementById("wrkflows");
+  let dropdown2 = document.querySelector(".dropdownlistOne");
 
-  link.addEventListener("click", function (event) {
+  link1.addEventListener("click", function (event) {
     event.preventDefault();
 
-    if (dropdown.style.display === "none") {
-      dropdown.style.display = "flex";
+    if (dropdown1.style.display === "none") {
+      dropdown1.style.display = "flex";
     } else {
-      dropdown.style.display = "none";
+      dropdown1.style.display = "none";
+    }
+  });
+
+  link2.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    if (dropdown2.style.display === "none") {
+      dropdown2.style.display = "flex";
+    } else {
+      dropdown2.style.display = "none";
     }
   });
 
   document.addEventListener("click", function (event) {
     if (
-      event.target !== link &&
-      event.target.closest(".dropdownlistTwo") !== dropdown
+      event.target !== link1 &&
+      event.target.closest(".dropdownlistTwo") !== dropdown1 &&
+      event.target !== link2 &&
+      event.target.closest(".dropdownlistOne") !== dropdown2
     ) {
-      dropdown.style.display = "none";
-    }
-  });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  var link = document.getElementById("wrkflows");
-  var dropdown = document.querySelector(".dropdownlistOne");
-
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    if (dropdown.style.display === "none") {
-      dropdown.style.display = "flex";
-    } else {
-      dropdown.style.display = "none";
-    }
-  });
-  document.addEventListener("click", function (event) {
-    if (
-      event.target !== link &&
-      event.target.closest(".dropdownlistOne") !== dropdown
-    ) {
-      dropdown.style.display = "none";
+      dropdown1.style.display = "none";
+      dropdown2.style.display = "none";
     }
   });
 });
 document.getElementById("headerbutton").addEventListener("click", function () {
-  var scrollPosition = window.innerHeight * 0.8;
+  let scrollPosition = window.innerHeight * 0.8;
 
   window.scrollTo({
     top: scrollPosition,
