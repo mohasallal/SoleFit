@@ -150,16 +150,18 @@ main {
 .wrapper {
   padding: 50px;
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: 500px 500px;
   gap: 15px;
   place-items: center;
-  align-items: flex-start;
 }
 
 .card {
   display: block;
   width: 400px;
   position: relative;
+  cursor: pointer;
 }
 
 .card img {
