@@ -15,6 +15,7 @@
     <header>
       <div class="HeaderDiv">
         <nav>
+          <div class="sidemenu"></div>
           <ul class="leftNav">
             <li>
               <img
@@ -25,7 +26,7 @@
               <span class="logoText"><span>|</span> SoleFit</span>
             </li>
           </ul>
-          <ul>
+          <ul class="rightNav">
             <li><a href="#">HOW IT WORKS</a></li>
             <li>
               <a href="" id="wrkflows">WORKFLOWS ▼</a>
@@ -40,7 +41,7 @@
             <li><a href="#">BLOG</a></li>
             <li><a href="#">SUPPORT</a></li>
             <li><a href="#">SHOP</a></li>
-            <li>
+            <li class="cart">
               <a href="#"
                 ><img
                   class="smallIcon"
@@ -48,7 +49,7 @@
                   alt="Shopping bag"
               /></a>
             </li>
-            <li>
+            <li class="currency">
               <a href="" id="mnyvrsnclk">USD ▼</a>
               <ul class="dropdownlistTwo">
                 <li><a href="#">USD</a></li>
@@ -58,6 +59,16 @@
                 <li><a href="#">JOR</a></li>
               </ul>
             </li>
+            <button id="sideMenuBtn" class="sideMenuBtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+              </svg>
+            </button>
           </ul>
         </nav>
         <div class="HeaderText">
@@ -160,11 +171,6 @@
           <p>Ideal for photo & video. Adaptable to any workflow</p>
         </div>
       </div>
-      <div class="MidMainImg"></div>
-      <div class="wrapper"></div>
-    </main>
-
-    <footer>
       <section class="container">
         <div class="slider-wrapper">
           <div class="slider">
@@ -182,8 +188,11 @@
           </div>
         </div>
       </section>
-    </footer>
+      <div class="MidMainImg"></div>
+      <div class="wrapper"></div>
+    </main>
 
+    <footer></footer>
     <script src="index.js"></script>
   </body>
 </html>
