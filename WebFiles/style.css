@@ -273,7 +273,7 @@ main {
   opacity: 1;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1046px) {
   nav {
     width: 100%;
     top: 0;
