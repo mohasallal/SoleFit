@@ -62,7 +62,8 @@ nav ul li a {
   font-weight: 600;
 }
 
-nav ul li a:hover {
+.leftNav li a:hover,
+.rightNav li a:hover {
   color: var(--redColorHover);
   transition-duration: 0.25s;
   transition-timing-function: ease-in-out;
@@ -103,13 +104,61 @@ nav ul li a:hover {
   fill: var(--blackColor);
 }
 
+.disableonclick {
+}
+
 .sidemenu {
-  display: none;
+  display: block;
   position: fixed;
+  top: 0;
   right: 0;
-  background-color: #c62828;
-  height: 100dvh;
-  width: 500px;
+  width: 400px;
+  height: 100%;
+  background-color: var(--whiteColor);
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  z-index: 1000;
+}
+
+.sidemenuNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.sidemenuNav li {
+  padding-left: 15px;
+  width: 90%;
+  padding: 15px 10px;
+}
+.cart a svg {
+  fill: var(--blackColor);
+}
+.sidemenuNav li:hover {
+  background-color: hsla(0, 0%, 25%, 0.5);
+}
+
+.sidemenuNav li:hover > a {
+  color: white;
+}
+
+.sidemenuNav li:hover > a > svg {
+  fill: white;
+}
+
+.sidemenuNav li a {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.dropdownlistSideMenu,
+.dropdownlistTwoSideMenu {
+  display: none;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
 }
 
 .HeaderText {
@@ -158,6 +207,7 @@ nav ul li a:hover {
 }
 
 main {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
