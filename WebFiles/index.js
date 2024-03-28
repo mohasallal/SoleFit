@@ -44,3 +44,19 @@ document.getElementById("headerbutton").addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sideMenuBtn = document.getElementById("sideMenuBtn");
+  const sideMenu = document.querySelector(".sidemenu");
+
+  sideMenuBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    sideMenu.classList.toggle("show"); // Toggle the 'show' class
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!sideMenu.contains(e.target) && !sideMenuBtn.contains(e.target)) {
+      sideMenu.classList.remove("show"); // Hide the sidemenu
+    }
+  });
+});
